@@ -18,35 +18,49 @@
 </head>
 <body>
 
+	<!-- SCROLL UP -->
+
+	<div class="scrollUp">
+		<a class="ion-chevron-up" href="#">TOP</a>
+	</div>
+
 	<!-- NAV BAR -->
 
 	<div class="navbar">
 		<ul>
-			<li><a href="#">LA ORQUESTA</a></li>
-			<li><a href="#">ANGEL MAHLER</a></li>
+			<li><a href="#!">INICIO</a></li>
 			<li><a href="#">NUESTROS SHOWS</a></li>
-			<li><a href="#">FOTOS</a></li>
-			<li><a href="#">VIDEOS</a></li>
-			<li><a href="#">CLIENTES</a></li>
-			<li><a href="#">CONTACTO</a></li>
+			<li><a href="fotos.html">FOTOS<span> | </span>VIDEOS</a></li>
+			<li><a href="clientes.html">CLIENTES</a></li>
+			<li><a href="http://www.angelmahler.com.ar" target="_blank">ANGEL MAHLER</a></li>
+			<li><a class="contacto" href="#">CONTACTO</a></li>
 		</ul>
 	</div>	
+
+	<!-- SCROLL NAV BAR -->
+	
+	<div class="scroll-navbar">
+		<ul>
+			<li><a href="#!">INICIO</a></li>
+			<li><a href="#">NUESTROS SHOWS</a></li>
+			<li><a href="fotos.html">FOTOS<span> | </span>VIDEOS</a></li>
+			<li><a href="clientes.html">CLIENTES</a></li>
+			<li><a href="http://www.angelmahler.com.ar" target="_blank">ANGEL MAHLER</a></li>
+			<li><a class="contacto2" href="#">CONTACTO</a></li>
+		</ul>
+	</div>
 
 	<!-- SLIDER -->
 
 	<div class="flexslider">
 		<ul class="slides">
-			<li>
-				<img src="img/Angel259n.jpg"/>
+			<li class="slider-img1">
 			</li>
-			<li>
-				<img src="img/IMG_2853.jpg"/>
+			<li class="slider-img2">
 			</li>
-			<li>
-				<img src="img/IMG_4418.jpg"/>
+			<li class="slider-img3">
 			</li>
-			<li>
-				<img src="img/IMG_2987.jpg"/>
+			<li class="slider-img4">
 			</li>
 		</ul>
 	</div>
@@ -63,23 +77,81 @@
 		</div>
 	</div>
 
-
-
-
-	<!-- CONTENT -->
-
-	<div class="content-title">
-		<div class="white-line"></div>
-		<h1>NUESTROS SHOWS</h1>
-		<div class="white-line"></div>
+	<!-- STILLS -->
+	
+	<div class="stills-whole-container">
+		<div class="stills-container">
+			<div class="stills-1-container">
+				<ul>
+					<li class="still show-empresas">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>SHOW EMPRESAS</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+					<li class="still noche-peliculas">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>UNA NOCHE DE PELÍCULAS</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="stills-2-container">
+				<ul>
+					<li class="still casamientos">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>EVENTOS, CASAMIENTOS, BAR Y BAT MITZVAH</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+					<li class="still cuarteto">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>EL CUARTETO</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="stills-3-container">
+				<ul>
+					<li class="still viena-waltz">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>VIENA WALTZ TANZ</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+					<li class="still iforquesta">
+						<a class="stills-links" href=""></a>
+						<div class="stills-titles">
+							<h3>LA IFORQUESTA</h3>
+							<p>Ben Ernst, a divorced, good-natured father from New Jersey</p>
+						</div>
+					</li>
+				</ul>
+			</div>	
+		</div>
 	</div>
 
 	<!-- FOOTER -->
 
-
 	<footer>
-		
-
+		<div class="contact">
+			<h3>CONTACTO</h3>
+			<p class="phone-number">+54 9 11 4540 9287</p>
+			<a class="ion-ios-email mail" href="mailto:masuttiguillermo@gmail.com">info@angelmahlerorquesta.com</a>
+			<ul class="social-icons-container">
+				<li><a class="ion-social-facebook" href="#!"></a></li>
+				<li><a class="ion-social-twitter" href="#!"></a></li>
+			</ul>
+			<div class="white-line line-footer"></div>
+			<p class="copyright">© IFORQUESTA ANGEL MAHLER 2015</p>
+		</div>	
 	</footer>
 
 
@@ -92,19 +164,76 @@
 
 	<script>
 
-		// $(document).ready(function(){
-		// 	$('.slider').css('display', 'none');
-		// 	$('.slider').fadeIn(3000);
-		// })
-
-$(window).load(function() {
-	$('.flexslider').flexslider({
-		animation: "fade",
-		slideshowSpeed: 4500
+	$('.scroll-down').click(function(){
+		$('html, body').animate({scrollTop : $('.stills-whole-container').offset().top},1000);
+		return false;
 	});
+
+	$('.contacto').click(function(){
+		$('html, body').animate({scrollTop : $('.contact').offset().top},800);
+		return false;
+	});
+
+	$('.scrollUp').click(function(){
+		$('html, body').animate({scrollTop : $('.navbar').offset().top},800);
+		return false;
+	});
+
+	$(document).ready(function(){
+		$('.flexslider').css('display', 'none');
+		$('.flexslider').fadeIn(3000);
+	})
+
+	$(window).load(function() {
+		$('.flexslider').flexslider({
+			animation: "fade",
+			slideshowSpeed: 5500
+		});
+	});
+
+	window.addEventListener("scroll",function() { 
+
+		if(window.scrollY > 150) {
+			$('.scrollUp').slideDown();
+		}
+		else {
+			$('.scrollUp').slideUp();
+		}
+	},false);
+
+	window.addEventListener("scroll",function() { 
+
+		if(window.scrollY > 300) {
+			$('.scroll-navbar').slideDown(600);
+		}
+		else {
+			$('.scroll-navbar').slideUp(600);
+		}
+	},false);
+
+	$(document).ready(function() {
+    
+    $(window).scroll( function(){
+    
+        $('.still').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object / 1.1){
+                
+                $(this).animate({'opacity':'1'},1000);
+                    
+            }
+            
+        }); 
+    
+    });
+    
 });
 
-</script>
+	</script>
 
 </body>
 </html>
